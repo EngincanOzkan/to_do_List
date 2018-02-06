@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         ref.child("data").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             guard let value = snapshot.value as? NSDictionary else{
-                print("The user has no data in our database")
+                print("The user has No data in our database")
                 return
             }
             let todoItems = value["todoItem"] as? [String]
